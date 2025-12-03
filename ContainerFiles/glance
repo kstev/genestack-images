@@ -30,7 +30,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
                                              libxslt1.1 \
                                              pkg-config \
                                              ssl-cert \
-                                             xmlsec1
+                                             xmlsec1 \
+                                             ceph-common
 RUN /var/lib/openstack/bin/pip install --constraint https://opendev.org/openstack/requirements/raw/branch/${OS_CONSTRAINTS}/upper-constraints.txt \
                                        git+https://opendev.org/openstack/glance.git@${OS_VERSION}#egg=glance \
                                        PyMySQL \
